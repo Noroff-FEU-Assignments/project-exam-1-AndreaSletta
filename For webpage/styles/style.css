@@ -1,0 +1,152 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: utopia-std-subhead, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+h2 {
+  font-family: utopia-std-subhead, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #6f7764;
+}
+
+/* Mobile */
+
+/* Navigation */
+
+header {
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+  position: fixed;
+  height: 70px;
+  justify-self: center;
+  align-items: center;
+  z-index: 9;
+  background-color: #ebedea;
+}
+header a {
+  display: flex;
+}
+
+header img {
+  height: 50px;
+  margin-left: 5vw;
+  z-index: 11;
+}
+
+#hamburgermenu {
+  display: none;
+}
+
+.spancontainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 25px;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  top: 20px;
+  right: 5vw;
+  z-index: 10;
+}
+
+span {
+  height: 2pt;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 3pt;
+  transition: all;
+  transition: 0.5s;
+  position: relative;
+  display: inline-flex;
+}
+
+nav {
+  transition: all;
+  transition: 0.5s;
+  background-color: #ebedea;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  left: 101%;
+  top: 0;
+  font-size: 20px;
+}
+nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+
+nav ul li {
+  list-style: none;
+  text-align: center;
+}
+
+#hamburgermenu:checked ~ nav {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+#hamburgermenu:checked ~ #hamburgerlabel .spancontainer .span2 {
+  width: 0;
+}
+
+#hamburgermenu:checked ~ #hamburgerlabel .spancontainer .span1 {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.span1 {
+  top: 0;
+}
+.span3 {
+  bottom: 0;
+}
+
+#hamburgermenu:checked ~ #hamburgerlabel .spancontainer .span3 {
+  transform: rotate(45deg);
+  bottom: 11px;
+}
+
+/* Footer */
