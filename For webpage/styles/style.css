@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: itc-avant-garde-gothic-pro, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-style: normal;
   scroll-behavior: smooth;
 }
@@ -82,7 +82,7 @@ span {
   height: 2pt;
   width: 100%;
   background-color: #000000;
-  border-radius: 3pt;
+  border-radius: 1pt;
   transition: all;
   transition: 0.5s;
   position: relative;
@@ -114,6 +114,9 @@ nav ul {
 nav ul li {
   list-style: none;
   text-align: center;
+}
+nav ul li a {
+  display: block;
 }
 
 #hamburgermenu:checked ~ nav {
@@ -150,3 +153,103 @@ nav ul li {
 }
 
 /* Footer */
+
+footer {
+  background-color: #6f7764;
+  bottom: 0;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+}
+footer p {
+  font-size: 10px;
+}
+
+.footerlogo,
+.mediaicons {
+  display: flex;
+  justify-content: center;
+}
+
+.footerlogo img,
+.mediaicons img {
+  height: 50px;
+}
+
+footer ul,
+.footeremail {
+  padding: 0;
+  margin: 15px 0px;
+}
+
+footer ul li {
+  margin: 10px;
+  list-style: none;
+}
+
+footer ul li a {
+  color: white;
+}
+
+footer ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footeremail label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footeremail p {
+  font-size: 15px;
+}
+.footeremail label div {
+  margin-top: 10px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 1pt;
+  border-width: 2pt;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.452);
+}
+
+.footeremail label div input,
+.footeremail label div button {
+  background-color: #6f7764;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  color: white;
+}
+.footeremail label div button {
+  border-style: solid;
+  border-color: white;
+  border-width: 0 0 0 2pt;
+}
+
+.footeremail label div button:hover {
+  background-color: #53584b;
+}
+
+.footeremail label div button:focus,
+.footeremail label div input:focus {
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.534);
+}
+
+.form-error {
+  margin-top: 10px;
+  display: none;
+}
+
+.horizontal {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
