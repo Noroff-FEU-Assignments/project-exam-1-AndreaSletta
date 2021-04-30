@@ -93,6 +93,7 @@ span {
   transition: 0.5s;
   position: relative;
   display: inline-flex;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
 }
 
 nav {
@@ -238,7 +239,7 @@ footer ul li a:hover {
 }
 
 .footeremail label div button:hover {
-  background-color: #53584b;
+  background-color: #6f7764;
 }
 
 .footeremail label div button:focus,
@@ -280,6 +281,7 @@ input::-webkit-input-placeholder {
   width: 150px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.452);
   text-align: center;
+  background-color: #ebedea;
 }
 
 .blackbutton p {
@@ -291,6 +293,20 @@ input::-webkit-input-placeholder {
   background-repeat: no-repeat;
   background-position: left;
   height: 50px;
+}
+
+.arrowup {
+  background-image: url(/icons/arrow.svg);
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  background-position: left;
+  height: 50px;
+  width: 30px;
+  right: 0;
+  bottom: 10px;
+  z-index: 4;
+  margin-right: 10px;
+  position: fixed;
 }
 
 /* carousel */
@@ -328,8 +344,11 @@ input::-webkit-input-placeholder {
 
 .carousel {
   /*
-  overflow-y: scroll;*/
+  overflow-y: scroll;
+ 
+  */
   overflow: hidden;
+
   width: 70%;
 }
 
@@ -341,6 +360,7 @@ input::-webkit-input-placeholder {
   width: fit-content;
   margin: 0;
   left: 0;
+  margin-left: 0vw;
   transition: all;
   transition: 0.5s; /*
   animation: 5s slider infinite;*/
@@ -350,6 +370,13 @@ input::-webkit-input-placeholder {
   width: 70vw;
   height: 350px;
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
+  transition: all;
+  transition: 0.5s;
+  display: none;
+}
+
+#post13 {
+  display: block;
 }
 
 .carousel figure div img {
@@ -378,3 +405,183 @@ input::-webkit-input-placeholder {
   }
 }
 */
+
+/*Post*/
+.greengradient {
+  background: linear-gradient(
+    to bottom,
+    #ebedea,
+    #ebedea 15vh,
+    transparent 15vh,
+    transparent 100%
+  );
+  margin-top: 70px;
+}
+.breadcumbs {
+  margin-left: 30px;
+}
+
+.breadcumbs ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.breadcumbs li + li:before {
+  content: "/";
+  padding: 0 1em;
+}
+
+.sortingbar {
+  position: absolute;
+  background-color: #ebedea;
+  border-style: solid;
+  border-color: black;
+  border-radius: 1pt;
+  border-width: 2pt;
+  width: 150px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.452);
+  margin-left: 30px;
+  text-align: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.sortingbar div {
+  padding: 5px 10px;
+}
+.sortingbar > *:first-child {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.sortingbar > *:first-child img {
+  height: 20px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition-property: all;
+  transition-duration: 0.4s;
+}
+
+.sortingbar > *:first-child p {
+  margin: 0 10px;
+}
+.hide {
+  display: none;
+  border-top: 2px solid black;
+}
+
+.sortingbar:hover .hide {
+  display: block;
+}
+
+.sortingbar:hover > *:first-child img {
+  height: 20px;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.hide:hover {
+  background-color: white;
+}
+
+.postconatiner {
+  display: grid;
+  grid-gap: 50px;
+  justify-content: center;
+}
+
+.postconatiner div {
+  display: inline-block;
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+.postconatiner div img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+/*Single post*/
+
+.productblog {
+  width: 90%;
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.productblog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+.smallimage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.smallimage img {
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+/*Contact*/
+
+.greenbackground {
+  margin-top: 70px;
+  margin-bottom: -70px;
+  background-color: #ebedea;
+  height: 100vh;
+}
+
+.contactform {
+  background-color: white;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+.contactform label,
+.submit {
+  margin: 10px;
+}
+
+.contactform input {
+  height: 35px;
+}
+.contactform textarea {
+  height: 100px;
+}
+.contactform input,
+.contactform textarea {
+  margin: 10px;
+  background-color: #ebedea;
+  border: none;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+/*About us*/
+
+.aboutus {
+  width: 90%;
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.aboutus img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}

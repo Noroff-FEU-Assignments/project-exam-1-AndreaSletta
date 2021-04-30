@@ -31,7 +31,51 @@
         </nav>
       </div>
     </header>
-    <main></main>
+    <main class="greenbackground">
+      <div class="breadcumbs">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contactus.html">Contact us</a></li>
+        </ul>
+      </div>
+      <form class="contactform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." />
+        <div class="form-error" id="nameError">Please enter your name.</div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email.."
+        />
+        <div class="form-error" id="emailError">
+          Please enter a valid email.
+        </div>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Your subject.."
+        />
+        <div class="form-error" id="emailError">
+          Please enter a valid email.
+        </div>
+        <label for="textarea">Message</label>
+        <textarea
+          id="textarea"
+          name="textarea"
+          placeholder="Write something.."
+        ></textarea>
+        <div class="form-error" id="textareaError">
+          Please write your inquery.
+        </div>
+        <button name="submitform" type="button" class="submit blackbutton">
+          Submit
+        </button>
+      </form>
+    </main>
     <footer>
       <div class="footerlogo">
         <a href="index.html">
