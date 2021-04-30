@@ -4,9 +4,7 @@ const url =
   "https://andreaslettaexam.eu/wp-json/wc/store/products?_embed&per_page=20";
 
 const carousel = document.querySelector(".carousel > figure");
-
-const postConatiner = document.querySelector(".postconatiner");
-
+const figure = document.querySelector(".figure");
 async function getAllPosts() {
   try {
     const response = await fetch(url);
@@ -15,11 +13,84 @@ async function getAllPosts() {
 
     console.log(content);
     //
+    /*
     var style = window.getComputedStyle(carousel);
     var margLelft = style.getPropertyValue("margin-left");
     var windowWidth = window.innerWidth * 0.7;
     var minusNum = parseInt(margLelft) - windowWidth;
-    /*var carouselNull = `<div >
+*/ content.length = 9;
+    for (let i = 0; i < content.length; i++) {
+      carousel.innerHTML += `<div id="${"post" + content[i].id}">
+        <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+      <h3>${content[i].name}</h3>
+      <p>${content[i].description}</p>
+      </div>`;
+    }
+
+    rightButton.onclick = function forRightButton() {
+      if (figure.style.left == 0 || figure.style.left == "0px") {
+        figure.style.left = "-100%";
+      } else if (figure.style.left == "-100%") {
+        figure.style.left = "-200%";
+      } else if (figure.style.left == "-200%") {
+        figure.style.left = "-300%";
+      } else if (figure.style.left == "-300%") {
+        figure.style.left = "-400%";
+      } else if (figure.style.left == "-400%") {
+        figure.style.left = "-500%";
+      } else if (figure.style.left == "-500%") {
+        figure.style.left = "-600%";
+      } else if (figure.style.left == "-600%") {
+        figure.style.left = "-700%";
+      } else if (figure.style.left == "-700%") {
+        figure.style.left = "-800%";
+      } else if (figure.style.left == "-800%") {
+        figure.style.left = 0;
+      }
+    };
+
+    leftButton.onclick = function forLeftButton() {
+      if (figure.style.left == 0 || figure.style.left == "0px") {
+        figure.style.left = "-800%";
+      } else if (figure.style.left == "-100%") {
+        figure.style.left = "0";
+      } else if (figure.style.left == "-200%") {
+        figure.style.left = "-100%";
+      } else if (figure.style.left == "-300%") {
+        figure.style.left = "-200%";
+      } else if (figure.style.left == "-400%") {
+        figure.style.left = "-300%";
+      } else if (figure.style.left == "-500%") {
+        figure.style.left = "-400%";
+      } else if (figure.style.left == "-600%") {
+        figure.style.left = "-500%";
+      } else if (figure.style.left == "-600%") {
+        figure.style.left = "-500%";
+      } else if (figure.style.left == "-700%") {
+        figure.style.left = "-600%";
+      } else if (figure.style.left == "-800%") {
+        figure.style.left = "-700%";
+      }
+    };
+
+    var style = window.getComputedStyle(carousel);
+    var margLelft = style.getPropertyValue("margin-left");
+    var left = style.getPropertyValue("left");
+
+    var windowWidth = window.innerWidth * 0.7;
+    var minusNum = parseInt(margLelft) - windowWidth;
+    var prosent = figure.style.left - 100;
+  } catch (error) {
+    console.log(error);
+  }
+}
+getAllPosts();
+
+const rightButton = document.querySelector(".buttonright");
+
+const leftButton = document.querySelector(".buttonleft");
+
+/*var carouselNull = `<div >
     <img src="${content[0].images[0].src}" alt="${content[0].images.alt}">
     <h3>${content[0].name}</h3>
     <p>${content[0].description}</p>
@@ -39,52 +110,13 @@ async function getAllPosts() {
         }
       }
       /**/
-    for (let i = 0; i < content.length; i++) {
-      // inder page
-      carousel.innerHTML += `<div id="${"post" + content[i].id}">
-        <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
-      <h3>${content[i].name}</h3>
-      <p>${content[i].description}</p>
-      </div>`;
-      // all posts page
-      postConatiner.innerHTML += `<div id="${"post" + content[i].id}">
-      <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
-    <h3>${content[i].name}</h3>
-    <p>${content[i].description}</p>
-    </div>`;
-    }
-    const post13 = document.querySelector("#post13");
-    const post17 = document.querySelector("#post17");
-    const post21 = document.querySelector("#post21");
-    const post25 = document.querySelector("#post25");
-    const post29 = document.querySelector("#post29");
-    const post34 = document.querySelector("#post34");
-    const post38 = document.querySelector("#post38");
-    const post42 = document.querySelector("#post42");
-    const post46 = document.querySelector("#post46");
-    const post51 = document.querySelector("#post51");
-    const post55 = document.querySelector("#post55");
-    const post59 = document.querySelector("#post59");
-    const post63 = document.querySelector("#post63");
-    const post69 = document.querySelector("#post69");
-
+/*
     rightButton.onclick = function forRightButton() {
       if (!(window.innerWidth > "700") && (post13.style.display = "block")) {
         post13.style.display = "none";
         post17.style.display = "block";
       }
-    };
-  } catch (error) {
-    console.log(error);
-  }
-}
-getAllPosts();
-
-//Make carousel buttons functioning
-
-const rightButton = document.querySelector(".buttonright");
-
-const leftButton = document.querySelector(".buttonleft");
+    };*/
 
 /*
 rightButton.onclick = function removeMargin() {

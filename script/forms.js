@@ -1,31 +1,61 @@
-// email input on footer
+// validation contact form
 
-const footerButton = document.querySelector(".footerbutton");
+const contactform = document.querySelector(".contactform");
 
-const footerEmail = document.querySelector(".footeremail");
+const fullName = document.querySelector("#name");
+const nameError = document.querySelector("#nameError");
 
-const emailFooter = document.querySelector("#emailfooter");
-const emailFooterError = document.querySelector("#emailfootererror");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
 
-function validateFormFooter() {
-  if (checkLength(emailFooter.value, 3)) {
-    emailFooterError.style.display = "none";
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
+
+const textarea = document.querySelector("#textarea");
+const textareaError = document.querySelector("#textareaError");
+
+const submit = document.querySelector(".submit");
+
+function validateForm() {
+  if (checkLength(fullName.value, 5)) {
+    nameError.style.display = "none";
   } else {
-    emailFooterError.style.display = "block";
+    nameError.style.display = "block";
+  }
+
+  if (validateEmail(email.value)) {
+    emailError.style.display = "none";
+  } else {
+    emailError.style.display = "block";
+  }
+  if (checkLength(subject.value, 15)) {
+    subjectError.style.display = "none";
+  } else {
+    subjectError.style.display = "block";
+  }
+
+  if (checkLength(textarea.value, 25)) {
+    textareaError.style.display = "none";
+  } else {
+    textareaError.style.display = "block";
   }
 
   // confirm
 
   if (
-    checkLength(emailFooter.value, 3) &&
-    validateEmailFooter(emailFooter.value)
+    checkLength(fullName.value, 5) &&
+    validateEmail(email.value) &&
+    checkLength(subject.value, 15) &&
+    checkLength(textarea.value, 25)
   ) {
-    footerEmail.innerHTML +=
-      "<p>" + "We have recieved your message and will respond to you soon!";
+    contactform.innerHTML +=
+      "<p>" +
+      "We have recieved your message and will respond to you soon!" +
+      "</p>";
   }
 }
 
-footerButton.addEventListener("click", validateFormFooter);
+submit.addEventListener("click", validateForm);
 
 function checkLength(value, len) {
   if (value.trim().length > len) {
@@ -35,10 +65,8 @@ function checkLength(value, len) {
   }
 }
 
-function validateEmailFooter(email) {
+function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
-
-// validation contact form
