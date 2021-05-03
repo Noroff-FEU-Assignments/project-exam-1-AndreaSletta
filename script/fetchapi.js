@@ -5,6 +5,7 @@ const url =
 
 const carousel = document.querySelector(".carousel > figure");
 const figure = document.querySelector(".figure");
+
 async function getAllPosts() {
   try {
     const response = await fetch(url);
@@ -20,11 +21,14 @@ async function getAllPosts() {
     var minusNum = parseInt(margLelft) - windowWidth;
 */ content.length = 9;
     for (let i = 0; i < content.length; i++) {
-      carousel.innerHTML += `<div id="${"post" + content[i].id}">
+      carousel.innerHTML += `
+      <a href="individualpost.html?id=${content[i].id}">
+        <div id="${"post" + content[i].id}">
         <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
-      <h3>${content[i].name}</h3>
-      <p>${content[i].description}</p>
-      </div>`;
+      <h3>${content[i].name}</h3>  
+      <p>${content[i].short_description.slice(3, 40)} ... 
+      <p class="greentext">Continue reading
+    `;
     }
 
     rightButton.onclick = function forRightButton() {

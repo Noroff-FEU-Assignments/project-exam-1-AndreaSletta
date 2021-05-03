@@ -281,11 +281,14 @@ input::-webkit-input-placeholder {
   width: 150px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.452);
   text-align: center;
-  background-color: #ebedea;
+  background-color: none;
 }
-
+.blackbutton a {
+  text-decoration: none;
+  color: black;
+}
 .blackbutton p {
-  margin: 0;
+  margin: 3px 0;
 }
 
 .arrowdown {
@@ -310,100 +313,96 @@ input::-webkit-input-placeholder {
 }
 
 /* carousel */
-
-.carouselcontainer {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.belowfold {
+  background: linear-gradient(
+    to bottom,
+    #ebedea,
+    #ebedea 15vh,
+    transparent 15vh,
+    transparent 100%
+  );
+}
+.belowfold h2 {
+  margin: 0;
+  padding: 20px;
 }
 
+.carouselcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.buttonright,
 .buttonleft {
-  float: left;
-  background-image: url(/icons/arrow_left.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 10%;
   height: 20px;
+  border: none;
+  background-color: transparent;
+}
+.buttonleft {
+  background-image: url(/icons/arrow_left.svg);
 }
 
 .buttonright {
-  float: right;
-  right: 0;
   background-image: url(/icons/arrow_right.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 10%;
-  height: 20px;
 }
-/*
-.buttonright a {
-  float: right;
-  right: 0;
-  background-image: url(/icons/arrow_right.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 10%;
-  height: 20px;
-  transition: all;
-  transition: 0.5s;
-}*/
-/*
-.buttonleft:active + .carousel figure {
-  margin-left: -70vw;
-}*/
 
 .carousel {
-  /*overflow-y: scroll;
-
-  */
   overflow: hidden;
   width: 70%;
 }
 
 .carousel figure {
-  width: 70vw;
   position: relative;
   display: flex;
   flex-direction: row;
   width: fit-content;
-  margin: 0;
   left: 0;
   margin-left: 0vw;
-  transition: all;
-  transition: 0.5s; /*
-  animation: 5s slider;*/
-}
-
-.carousel figure div {
-  width: 70vw;
-  height: 350px;
-  box-shadow: 0px 3px 6px rgb(184, 184, 184);
-  transition: all;
   transition: 0.5s;
 }
 
-.carousel figure div img {
-  height: 70%;
+.carousel figure div {
+  width: 60vw;
+  height: 400px;
+  margin: 0 5vw;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+  transition: all;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel a {
+  text-decoration: none;
+  color: black;
+}
+
+.carousel img {
+  height: 60%;
   width: 100%;
   object-fit: cover;
 }
 
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  45% {
-    left: 0;
-  }
+.carousel h3,
+.carousel p {
+  padding: 10px 15px 0 15px;
+  margin: 0;
+}
+.carousel h3 {
+  height: 40px;
+}
 
-  95% {
-    left: -100%;
-  }
-  100% {
-    left: -100%;
-  }
+.carousel p {
+}
+
+.greentext {
+  color: #6f7764;
+  text-decoration: underline;
 }
 
 /*Post*/
