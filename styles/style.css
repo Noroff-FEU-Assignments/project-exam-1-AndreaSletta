@@ -291,6 +291,10 @@ input::-webkit-input-placeholder {
   margin: 3px 0;
 }
 
+.center {
+  margin: auto;
+}
+
 .arrowdown {
   background-image: url(/icons/arrow.svg);
   background-repeat: no-repeat;
@@ -355,18 +359,20 @@ input::-webkit-input-placeholder {
   overflow: hidden;
   width: 70%;
 }
-
 .carousel figure {
-  position: relative;
-  display: flex;
   flex-direction: row;
   width: fit-content;
+}
+
+.postconatiner {
+  position: relative;
+  display: flex;
   left: 0;
   margin-left: 0vw;
   transition: 0.5s;
 }
 
-.carousel figure div {
+.postconatiner div {
   width: 60vw;
   height: 400px;
   margin: 0 5vw;
@@ -377,27 +383,24 @@ input::-webkit-input-placeholder {
   flex-direction: column;
 }
 
-.carousel a {
+.postconatiner a {
   text-decoration: none;
   color: black;
 }
 
-.carousel img {
+.postconatiner img {
   height: 60%;
   width: 100%;
   object-fit: cover;
 }
 
-.carousel h3,
-.carousel p {
+.postconatiner h3,
+.postconatiner p {
   padding: 10px 15px 0 15px;
   margin: 0;
 }
-.carousel h3 {
+.postconatiner h3 {
   height: 40px;
-}
-
-.carousel p {
 }
 
 .greentext {
@@ -405,16 +408,17 @@ input::-webkit-input-placeholder {
   text-decoration: underline;
 }
 
-/*Post*/
+/*Posts*/
 .greengradient {
   background: linear-gradient(
     to bottom,
     #ebedea,
-    #ebedea 15vh,
-    transparent 15vh,
+    #ebedea 22vh,
+    transparent 22vh,
     transparent 100%
   );
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 .breadcumbs {
   margin-left: 30px;
@@ -472,6 +476,10 @@ input::-webkit-input-placeholder {
   border-top: 2px solid black;
 }
 
+#old,
+#featured {
+  display: none;
+}
 .sortingbar:hover .hide {
   display: block;
 }
@@ -485,61 +493,64 @@ input::-webkit-input-placeholder {
 .hide:hover {
   background-color: white;
 }
-
-.postconatiner {
+#all,
+#old,
+#featured {
+  margin: 70px 0;
   display: grid;
   grid-gap: 50px;
   justify-content: center;
 }
 
-.postconatiner div {
-  display: inline-block;
-  width: 250px;
-  height: 400px;
-  overflow: hidden;
-  box-shadow: 0px 3px 6px rgb(184, 184, 184);
-}
-
-.postconatiner div img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-}
-
 /*Single post*/
 
-.productblog {
-  width: 90%;
-  margin-left: 5%;
-  justify-content: center;
+.productblog,
+.aboutus {
+  width: auto;
+  margin: 0 30px;
 }
 
-.productblog img {
+.productblog img,
+.aboutus img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+.productblog > *,
+.aboutus > * {
+  margin: 0 0 30px 0;
+}
+.productblog h1,
+.aboutus h2 {
+  margin-top: 30px;
 }
 
 .smallimage {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 30px;
 }
 
 .smallimage img {
-  height: 100%;
+  height: 135px;
   object-fit: cover;
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
 }
 
-/*Contact*/
+/*Contact*/ /*About us*/
 
 .greenbackground {
   margin-top: 70px;
   margin-bottom: -70px;
   background-color: #ebedea;
   height: 100vh;
+  overflow: visible;
+}
+.formcontainer {
+  height: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 .contactform {
@@ -577,18 +588,4 @@ input::-webkit-input-placeholder {
   background-color: #ebedea;
   border: none;
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
-}
-
-/*About us*/
-
-.aboutus {
-  width: 90%;
-  margin-left: 5%;
-  justify-content: center;
-}
-
-.aboutus img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
 }

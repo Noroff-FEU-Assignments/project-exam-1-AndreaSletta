@@ -35,16 +35,16 @@ async function getProduct() {
     console.log(productDetail);
 
     currentProductLink.innerHTML += `<a>
-      ${productDetail.name}
+      ${productDetail.name.slice(0, 15) + "..."}
       </a>`;
     productBlog.innerHTML += `<h1>${productDetail.name}</h1>
     <img class="bigimage" src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
-    <p>${productDetail.short_description}</p>
+    ${productDetail.short_description}
     <div class="smallimage">
     <img  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
     <img  src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
     </div>
-    <p>${productDetail.description}</p>
+    ${productDetail.description}
     `;
   } catch (error) {
     console.log(error);

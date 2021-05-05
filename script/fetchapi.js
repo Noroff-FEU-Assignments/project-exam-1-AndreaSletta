@@ -4,7 +4,7 @@ const url =
   "https://andreaslettaexam.eu/wp-json/wc/store/products?_embed&per_page=20";
 
 const carousel = document.querySelector(".carousel > figure");
-const figure = document.querySelector(".figure");
+const figure = document.querySelector(".postconatiner");
 
 async function getAllPosts() {
   try {
