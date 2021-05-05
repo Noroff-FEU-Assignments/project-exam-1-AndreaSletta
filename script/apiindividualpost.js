@@ -25,6 +25,7 @@ const productURL =
 
 const productBlog = document.querySelector(".productblog");
 const currentProductLink = document.querySelector(".productLink");
+
 // get singe product
 
 async function getProduct() {
@@ -38,14 +39,58 @@ async function getProduct() {
       ${productDetail.name.slice(0, 15) + "..."}
       </a>`;
     productBlog.innerHTML += `<h1>${productDetail.name}</h1>
-    <img class="bigimage" src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
+    <img class="bigimage" id="firstimage"  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
     ${productDetail.short_description}
     <div class="smallimage">
-    <img  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
-    <img  src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
+    <img id="secondimage"  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
+    <img id="thirdimage"   src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
     </div>
     ${productDetail.description}
     `;
+
+    //Modal
+
+    const firstImage = document.querySelector("#firstimage");
+    const secondImage = document.querySelector("#secondimage");
+    const thirdImage = document.querySelector("#thirdimage");
+    const modalContainer = document.querySelector(".modal");
+    modalContainer.style.display = "none";
+
+    // show first image bigger
+    function changeImage() {
+      console.log("hi");
+      modalContainer.innerHTML = `<img src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">`;
+      modalContainer.style.display = "flex";
+    }
+
+    firstImage.addEventListener("click", changeImage);
+
+    // show second image bigger
+    function changeSecondImage() {
+      console.log("hi");
+      modalContainer.innerHTML = `<img src="${productDetail.images[1].src}" alt="${productDetail.images[0].alt}">`;
+      modalContainer.style.display = "flex";
+    }
+
+    secondImage.addEventListener("click", changeSecondImage);
+
+    // show third image bigger
+    function changeThirdImage() {
+      console.log("hi");
+      modalContainer.innerHTML = `<img src="${productDetail.images[2].src}" alt="${productDetail.images[0].alt}">`;
+      modalContainer.style.display = "flex";
+    }
+
+    thirdImage.addEventListener("click", changeThirdImage);
+
+    // remove modal
+    function removeModal() {
+      console.log("hi");
+      modalContainer.innerHTML = "";
+      modalContainer.style.display = "none";
+    }
+
+    modalContainer.addEventListener("click", removeModal);
   } catch (error) {
     console.log(error);
   }

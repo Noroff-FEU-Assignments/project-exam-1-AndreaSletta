@@ -192,6 +192,10 @@ footer ul,
   margin: 15px 0px;
 }
 
+footer .form-error {
+  margin: 10px;
+}
+
 footer ul li {
   margin: 10px;
   list-style: none;
@@ -249,11 +253,6 @@ footer ul li a:hover {
 
 input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.534);
-}
-
-.form-error {
-  margin-top: 10px;
-  display: none;
 }
 
 .horizontal {
@@ -502,14 +501,18 @@ input::-webkit-input-placeholder {
   justify-content: center;
 }
 
-/*Single post*/
+/*Single post*/ /*About us*/
 
 .productblog,
 .aboutus {
   width: auto;
   margin: 0 30px;
 }
-
+/*
+.productblog img:hover {
+  transform: scale(2.02);
+}
+*/
 .productblog img,
 .aboutus img {
   width: 100%;
@@ -520,10 +523,6 @@ input::-webkit-input-placeholder {
 .productblog > *,
 .aboutus > * {
   margin: 0 0 30px 0;
-}
-.productblog h1,
-.aboutus h2 {
-  margin-top: 30px;
 }
 
 .smallimage {
@@ -538,14 +537,28 @@ input::-webkit-input-placeholder {
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
 }
 
-/*Contact*/ /*About us*/
+.modal {
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  display: flex;
+}
+.modal img {
+  width: 100%;
+  margin: auto;
+  height: 50%;
+  object-fit: cover;
+  box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+/*Contact*/
 
 .greenbackground {
   margin-top: 70px;
-  margin-bottom: -70px;
+  padding-bottom: 70px;
   background-color: #ebedea;
-  height: 100vh;
-  overflow: visible;
 }
 .formcontainer {
   height: 80%;
@@ -564,8 +577,9 @@ input::-webkit-input-placeholder {
 }
 
 .contactform label,
-.submit {
-  margin: 10px;
+.submit,
+.contactform p {
+  margin: 10px 10px 0 10px;
 }
 
 .contactform input {
@@ -588,4 +602,11 @@ input::-webkit-input-placeholder {
   background-color: #ebedea;
   border: none;
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
+}
+
+.contactform .form-error {
+  display: none;
+  margin: 0 10px 10px 10px;
+  font-style: italic;
+  color: #6f7764;
 }
