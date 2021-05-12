@@ -34,7 +34,7 @@ async function getAllPosts() {
       for (var i = 0; i < 6; i++) {
         postConatiner.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
-          <div id="${"post" + content[i].id}">
+          <div id="${"post" + content[i].id}" class="hoverscale">
           <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
@@ -45,7 +45,7 @@ async function getAllPosts() {
       for (var i = 0; i < 8; i++) {
         postConatiner.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
-          <div id="${"post" + content[i].id}">
+          <div id="${"post" + content[i].id}" class="hoverscale">
           <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
@@ -59,7 +59,7 @@ async function getAllPosts() {
       for (var i = 0; i < 9; i++) {
         containerOld.innerHTML += `
         <a href="individualpost.html?id=${content.reverse()[i].id}">
-          <div id="${"post" + content.reverse()[i].id}">
+          <div id="${"post" + content.reverse()[i].id}" class="hoverscale">
           <img src="${content.reverse()[i].images[0].src}" alt="${
           content.reverse()[i].images.alt
         }">
@@ -84,7 +84,7 @@ async function getAllPosts() {
           if (categories[j].name === "Featured") {
             containerFeatured.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
-          <div id="${"post" + content[i].id}">
+          <div id="${"post" + content[i].id}" class="hoverscale">
           <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
@@ -106,7 +106,7 @@ async function getAllPosts() {
       for (var i = 0; i < 9; i++) {
         postConatiner.innerHTML += `
       <a href="individualpost.html?id=${content[i].id}">
-        <div id="${"post" + content[i].id}">
+        <div id="${"post" + content[i].id}" class="hoverscale">
         <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
       <h3>${content[i].name}</h3>  
       <p>${content[i].short_description.slice(3, 40)} ... 
@@ -127,7 +127,7 @@ async function getAllPosts() {
         for (var i = 9; i < 14; i++) {
           postConatiner.innerHTML += `
           <a href="individualpost.html?id=${content[i].id}">
-            <div id="${"post" + content[i].id}">
+            <div id="${"post" + content[i].id}" class="hoverscale">
             <img src="${content[i].images[0].src}" alt="${
             content[i].images.alt
           }">

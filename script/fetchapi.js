@@ -23,7 +23,7 @@ async function getAllPosts() {
     for (let i = 0; i < content.length; i++) {
       carousel.innerHTML += `
       <a href="individualpost.html?id=${content[i].id}">
-        <div id="${"post" + content[i].id}">
+        <div id="${"post" + content[i].id}" class="hoverscale">
         <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
       <h3>${content[i].name}</h3>  
       <p>${content[i].short_description.slice(3, 40)} ... 
