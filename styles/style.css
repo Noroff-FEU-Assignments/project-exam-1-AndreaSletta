@@ -634,6 +634,10 @@ input::-webkit-input-placeholder {
   margin: 10px;
 }
 
+#emailfootererror:hover {
+  background-color: transparent;
+}
+
 /* Media Query for Tablets*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Navigation */
@@ -1034,7 +1038,7 @@ input::-webkit-input-placeholder {
   }
 
   .aboutus img {
-    height: 100%;
+    height: 400px;
     width: 50%;
     margin-right: 50px;
   }
@@ -1078,8 +1082,5 @@ input::-webkit-input-placeholder {
   .formcontainer {
     width: 50vw;
     padding-bottom: 0;
-  }
-
-  .contactform textarea {
   }
 }
