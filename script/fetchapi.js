@@ -32,48 +32,92 @@ async function getAllPosts() {
     }
 
     rightButton.onclick = function forRightButton() {
-      if (figure.style.left == 0 || figure.style.left == "0px") {
-        figure.style.left = "-100%";
-      } else if (figure.style.left == "-100%") {
-        figure.style.left = "-200%";
-      } else if (figure.style.left == "-200%") {
-        figure.style.left = "-300%";
-      } else if (figure.style.left == "-300%") {
-        figure.style.left = "-400%";
-      } else if (figure.style.left == "-400%") {
-        figure.style.left = "-500%";
-      } else if (figure.style.left == "-500%") {
-        figure.style.left = "-600%";
-      } else if (figure.style.left == "-600%") {
-        figure.style.left = "-700%";
-      } else if (figure.style.left == "-700%") {
-        figure.style.left = "-800%";
-      } else if (figure.style.left == "-800%") {
-        figure.style.left = 0;
+      if (window.innerWidth < 768) {
+        if (figure.style.left == 0 || figure.style.left == "0px") {
+          figure.style.left = "-100%";
+        } else if (figure.style.left == "-100%") {
+          figure.style.left = "-200%";
+        } else if (figure.style.left == "-200%") {
+          figure.style.left = "-300%";
+        } else if (figure.style.left == "-300%") {
+          figure.style.left = "-400%";
+        } else if (figure.style.left == "-400%") {
+          figure.style.left = "-500%";
+        } else if (figure.style.left == "-500%") {
+          figure.style.left = "-600%";
+        } else if (figure.style.left == "-600%") {
+          figure.style.left = "-700%";
+        } else if (figure.style.left == "-700%") {
+          figure.style.left = "-800%";
+        } else if (figure.style.left == "-800%") {
+          figure.style.left = 0;
+        }
+      } else if (window.innerWidth > 767 && window.innerWidth < 1024) {
+        if (figure.style.left == 0 || figure.style.left == "0px") {
+          figure.style.left = "-100%";
+        } else if (figure.style.left == "-100%") {
+          figure.style.left = "-200%";
+        } else if (figure.style.left == "-200%") {
+          figure.style.left = "-300%";
+        } else if (figure.style.left == "-300%") {
+          figure.style.left = "-400%";
+        } else if (figure.style.left == "-400%") {
+          figure.style.left = 0;
+        }
+      } else if (window.innerWidth > 1023) {
+        if (figure.style.left == 0 || figure.style.left == "0px") {
+          figure.style.left = "-100%";
+        } else if (figure.style.left == "-100%") {
+          figure.style.left = "-200%";
+        } else if (figure.style.left == "-200%") {
+          figure.style.left = 0;
+        }
       }
     };
 
     leftButton.onclick = function forLeftButton() {
-      if (figure.style.left == 0 || figure.style.left == "0px") {
-        figure.style.left = "-800%";
-      } else if (figure.style.left == "-100%") {
-        figure.style.left = "0";
-      } else if (figure.style.left == "-200%") {
-        figure.style.left = "-100%";
-      } else if (figure.style.left == "-300%") {
-        figure.style.left = "-200%";
-      } else if (figure.style.left == "-400%") {
-        figure.style.left = "-300%";
-      } else if (figure.style.left == "-500%") {
-        figure.style.left = "-400%";
-      } else if (figure.style.left == "-600%") {
-        figure.style.left = "-500%";
-      } else if (figure.style.left == "-600%") {
-        figure.style.left = "-500%";
-      } else if (figure.style.left == "-700%") {
-        figure.style.left = "-600%";
-      } else if (figure.style.left == "-800%") {
-        figure.style.left = "-700%";
+      if (window.innerWidth < 768) {
+        if (figure.style.left == 0 || figure.style.left == "0px") {
+          figure.style.left = "-800%";
+        } else if (figure.style.left == "-100%") {
+          figure.style.left = "0";
+        } else if (figure.style.left == "-200%") {
+          figure.style.left = "-100%";
+        } else if (figure.style.left == "-300%") {
+          figure.style.left = "-200%";
+        } else if (figure.style.left == "-400%") {
+          figure.style.left = "-300%";
+        } else if (figure.style.left == "-500%") {
+          figure.style.left = "-400%";
+        } else if (figure.style.left == "-600%") {
+          figure.style.left = "-500%";
+        } else if (figure.style.left == "-600%") {
+          figure.style.left = "-500%";
+        } else if (figure.style.left == "-700%") {
+          figure.style.left = "-600%";
+        } else if (figure.style.left == "-800%") {
+          figure.style.left = "-700%";
+        }
+      } else if (window.innerWidth > 767 && window.innerWidth < 1024) {
+        if (figure.style.left == 0 || figure.style.left == "0px") {
+          figure.style.left = "-400%";
+        } else if (figure.style.left == "-100%") {
+          figure.style.left = "0";
+        } else if (figure.style.left == "-200%") {
+          figure.style.left = "-100%";
+        } else if (figure.style.left == "-300%") {
+          figure.style.left = "-200%";
+        } else if (figure.style.left == "-400%") {
+          figure.style.left = "-300%";
+        }
+      } else if (window.innerWidth > 1023) {
+        if (figure.style.left == 0 || figure.style.left == "0px") {
+          figure.style.left = "-200%";
+        } else if (figure.style.left == "-100%") {
+          figure.style.left = "0";
+        } else if (figure.style.left == "-200%") {
+          figure.style.left = "-100%";
+        }
       }
     };
 

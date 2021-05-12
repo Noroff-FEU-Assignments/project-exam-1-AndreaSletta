@@ -34,11 +34,11 @@ async function getProduct() {
     const productDetail = await respons.json();
 
     console.log(productDetail);
-
-    currentProductLink.innerHTML += `<a>
+    if (window.innerWidth < 1024) {
+      currentProductLink.innerHTML += `<a>
       ${productDetail.name.slice(0, 15) + "..."}
       </a>`;
-    productBlog.innerHTML += `<h1>${productDetail.name}</h1>
+      productBlog.innerHTML += `<h1>${productDetail.name}</h1>
     <img class="bigimage" id="firstimage"  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
     ${productDetail.short_description}
     <div class="smallimage">
@@ -47,7 +47,25 @@ async function getProduct() {
     </div>
     ${productDetail.description}
     `;
-
+    } else if (window.innerWidth > 1023) {
+      currentProductLink.innerHTML += `<a>
+      ${productDetail.name.slice(0, 15) + "..."}
+      </a>`;
+      productBlog.innerHTML += `<h1>${productDetail.name}</h1>
+      <div class="left">
+    <img class="bigimage" id="firstimage"  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
+    ${productDetail.short_description}
+    </div>
+    <div class="right">
+    ${productDetail.description}
+    <div class="smallimage">
+    <img id="secondimage"  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
+    <img id="thirdimage"   src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
+    </div>
+    </div>
+   
+    `;
+    }
     //Modal
 
     const firstImage = document.querySelector("#firstimage");

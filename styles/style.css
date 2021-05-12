@@ -65,7 +65,8 @@ header img {
   z-index: 11;
 }
 
-#hamburgermenu {
+#hamburgermenu,
+.formimage {
   display: none;
 }
 
@@ -256,6 +257,7 @@ input::-webkit-input-placeholder {
 }
 
 .horizontal {
+  width: 100%;
   display: inline-flex;
   justify-content: space-evenly;
 }
@@ -508,11 +510,7 @@ input::-webkit-input-placeholder {
   width: auto;
   margin: 0 30px;
 }
-/*
-.productblog img:hover {
-  transform: scale(2.02);
-}
-*/
+
 .productblog img,
 .aboutus img {
   width: 100%;
@@ -538,6 +536,7 @@ input::-webkit-input-placeholder {
 }
 
 .modal {
+  background-color: #ffffff70;
   width: 100vw;
   height: 100vh;
   z-index: 5;
@@ -546,7 +545,7 @@ input::-webkit-input-placeholder {
   display: flex;
 }
 .modal img {
-  width: 100%;
+  width: 90vw;
   margin: auto;
   height: 50%;
   object-fit: cover;
@@ -557,11 +556,11 @@ input::-webkit-input-placeholder {
 
 .greenbackground {
   margin-top: 70px;
-  padding-bottom: 70px;
   background-color: #ebedea;
 }
 .formcontainer {
-  height: 80%;
+  min-height: 90vh;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -609,4 +608,427 @@ input::-webkit-input-placeholder {
   margin: 0 10px 10px 10px;
   font-style: italic;
   color: #6f7764;
+}
+#emailfootererror {
+  border: none;
+  margin: 10px;
+}
+
+/* Media Query for Tablets*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Navigation */
+
+  #hamburgermenu,
+  #hamburgerlabel {
+    display: none;
+  }
+
+  .navigation {
+    width: 65%;
+    display: flex;
+    align-content: center;
+    margin: 0 5vw;
+  }
+
+  nav {
+    position: relative;
+    height: 70px;
+    left: 0;
+  }
+  nav ul {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* Footer */
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    text-align: inherit;
+  }
+
+  .footerlogo,
+  .mediaicons {
+    display: block;
+  }
+
+  .footerlogo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .thermsservice {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 60px;
+    justify-self: left;
+    width: 100%;
+  }
+
+  .thermsservice p {
+    margin: 0 0 10px 0;
+  }
+
+  .mediaicons {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: right;
+  }
+  .footeremail {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top: 60px;
+    margin: 0;
+    justify-self: right;
+    text-align: right;
+  }
+
+  footer ul {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 190px;
+  }
+
+  /* Index */
+
+  .landingpage {
+    height: 50vh;
+    padding: 90px 60px 0px 60px;
+    background-position: top;
+  }
+
+  .arrowdown {
+    display: none;
+  }
+
+  /* carousel */
+  .belowfold {
+    padding-bottom: 50px;
+  }
+
+  .belowfold h2 {
+    padding: 30px 60px;
+  }
+
+  .buttonright,
+  .buttonleft {
+    height: 40px;
+  }
+
+  .postconatiner div {
+    width: 25vw;
+  }
+
+  /*Posts*/
+  .breadcumbs {
+    margin-left: 3vw;
+  }
+
+  .sortingbar {
+    margin-left: 5vw;
+  }
+
+  #all,
+  #old,
+  #featured {
+    margin: 5vw;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #all div,
+  #old div,
+  #featured div {
+    width: 100%;
+    margin: 0;
+  }
+
+  /*Single post*/ /*About us*/
+  .productblog,
+  .aboutus {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .productblog img,
+  .aboutus img {
+    height: 300px;
+  }
+  /*Contact*/
+
+  .greenbackground {
+    min-height: 100vh;
+  }
+
+  .contactform textarea {
+    height: 20vh;
+  }
+}
+
+/* Media Query for Desktop*/
+@media (min-width: 1024px) {
+  #hamburgermenu,
+  #hamburgerlabel {
+    display: none;
+  }
+
+  .navigation {
+    width: 65%;
+    display: flex;
+    align-content: center;
+    margin: 0 5vw;
+  }
+
+  nav {
+    position: relative;
+    height: 70px;
+    left: 0;
+  }
+  nav ul {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* Footer */
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    text-align: inherit;
+  }
+
+  .footerlogo,
+  .mediaicons {
+    display: block;
+  }
+
+  .footerlogo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .thermsservice {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 60px;
+    justify-self: left;
+    width: 100%;
+  }
+
+  .thermsservice p {
+    margin: 0 0 10px 0;
+  }
+
+  .mediaicons {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: right;
+  }
+  .footeremail {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top: 60px;
+    margin: 0;
+    justify-self: right;
+    text-align: right;
+  }
+
+  footer ul {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+  }
+
+  footer ul li {
+    display: inline;
+  }
+
+  .horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 190px;
+  }
+
+  /* Index */
+
+  .landingpage {
+    height: 40vh;
+    padding: 90px 60px 0px 60px;
+    background-position: top;
+  }
+
+  .arrowdown {
+    display: none;
+  }
+
+  /* carousel */
+  .belowfold {
+    padding-bottom: 50px;
+  }
+
+  .belowfold h2 {
+    padding: 30px 60px;
+  }
+
+  .buttonright,
+  .buttonleft {
+    height: 40px;
+  }
+
+  .postconatiner div {
+    width: 17.3333vw;
+    margin: 0 3vw;
+  }
+
+  /*Posts*/
+  .breadcumbs {
+    margin-left: 3vw;
+  }
+
+  .sortingbar {
+    margin-left: 5vw;
+  }
+
+  #all,
+  #old,
+  #featured {
+    margin: 5vw;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #all div,
+  #old div,
+  #featured div {
+    width: 100%;
+    margin: 0;
+  }
+  .arrowup {
+    display: none;
+  }
+
+  /*Single post*/ /*About us*/
+
+  .productblog {
+    margin: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 50px;
+  }
+
+  .productblog h1 {
+    width: 100%;
+  }
+
+  .productblog h1,
+  .left,
+  .right {
+    display: inline-block;
+  }
+
+  .left {
+    flex: 1;
+  }
+  .right {
+    flex: 1;
+  }
+
+  .left p {
+    margin: 50px 0 0 0;
+  }
+  .right p {
+    margin: 0 0 50px 0;
+  }
+
+  .productblog img {
+    width: 100%;
+    height: 400px;
+  }
+  .productblog > *,
+  .aboutus > * {
+    margin: 0 0 0 0;
+  }
+
+  .smallimage {
+    grid-gap: 50px;
+  }
+
+  .smallimage img {
+    height: 300px;
+  }
+
+  .modal {
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    display: flex;
+  }
+  .modal img {
+    width: auto;
+    margin: auto;
+    height: 70%;
+    object-fit: cover;
+    box-shadow: 0px 3px 6px rgb(184, 184, 184);
+  }
+
+  .aboutus {
+    margin: 0 5vw 5vw 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 50px;
+  }
+
+  .aboutus img {
+    display: flex;
+    flex: 1;
+    object-fit: cover;
+    height: 100%;
+    width: 50%;
+  }
+
+  .abouttext {
+    flex: 1;
+  }
+
+  /*Contact*/
+
+  .greenbackground {
+    min-height: 100vh;
+  }
+
+  .formimage {
+    background-image: url(/images/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 50vw;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    box-shadow: 0px 3px 6px rgb(184, 184, 184);
+  }
+
+  .formcontainer {
+    width: 50vw;
+    padding-bottom: 0;
+  }
+
+  .contactform textarea {
+  }
 }
