@@ -925,7 +925,6 @@ input::-webkit-input-placeholder {
     margin: 0 5vw;
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 50px;
   }
 
   .productblog h1 {
@@ -940,6 +939,7 @@ input::-webkit-input-placeholder {
 
   .left {
     flex: 1;
+    padding-right: 50px;
   }
   .right {
     flex: 1;
