@@ -46,8 +46,6 @@ async function getAllPosts() {
       }
     }
 
-    //hide category dropdown
-
     //Sort by popular
 
     sortPopular.onclick = function showPopular() {
@@ -172,13 +170,11 @@ async function getAllPosts() {
         const childCount = postConatiner.childElementCount;
         for (var i = childCount; i < childCount + 4; i++) {
           postConatiner.innerHTML += `
-        <a href="individualpost.html?id=${content.reverse[i].id}">
-          <div id="${"post" + content.reverse[i].id}" class="hoverscale">
-          <img src="${content.reverse[i].images[0].src}" alt="${
-            content.reverse[i].images.alt
-          }">
-        <h3>${content.reverse[i].name}</h3>  
-        <p>${content.reverse[i].short_description.slice(3, 40)} ... 
+        <a href="individualpost.html?id=${content[i].id}">
+          <div id="${"post" + content[i].id}" class="hoverscale">
+          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+        <h3>${content[i].name}</h3>  
+        <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading
       `;
           console.log(childCount);
