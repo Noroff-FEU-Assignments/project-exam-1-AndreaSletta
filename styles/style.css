@@ -326,11 +326,14 @@ input::-webkit-input-placeholder {
   background-position: left;
   height: 50px;
   width: 30px;
-  right: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  float: right;
   bottom: 10px;
-  z-index: 4;
-  margin-right: 10px;
-  position: fixed;
+  width: 8vw;
+  padding-right: 1vw;
+  right: 0;
+  z-index: 5;
 }
 
 /* carousel */
