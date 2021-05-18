@@ -1,5 +1,3 @@
-// https://andreaslettaexam.eu/wp-json/wc/store/products
-
 const url =
   "https://andreaslettaexam.eu/wp-json/wc/store/products?_embed&per_page=20";
 
@@ -26,7 +24,7 @@ const productURL =
 const productBlog = document.querySelector(".productblog");
 const currentProductLink = document.querySelector(".productLink");
 
-// get singe product
+// get singel product
 
 async function getProduct() {
   try {
@@ -34,36 +32,38 @@ async function getProduct() {
     const productDetail = await respons.json();
 
     console.log(productDetail);
+
+    document.title = `${productDetail.name.slice(0, 15) + "... - the garden"}`;
+
     if (window.innerWidth < 1024) {
-      currentProductLink.innerHTML += `<a>
+      currentProductLink.innerHTML += `<a href="${window.location.href}">
       ${productDetail.name.slice(0, 15) + "..."}
       </a>`;
       productBlog.innerHTML += `<h1>${productDetail.name}</h1>
-    <img class="bigimage hoverscale" id="firstimage"  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
+    <img class="bigimage hoverscale" id="firstimage" tabindex=0 src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
     ${productDetail.short_description}
     <div class="smallimage">
-    <img id="secondimage" class="hoverscale"  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
-    <img id="thirdimage" class="hoverscale"   src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
+    <img id="secondimage" class="hoverscale" tabindex=0 src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
+    <img id="thirdimage" class="hoverscale" tabindex=0  src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
     </div>
     ${productDetail.description}
     `;
     } else if (window.innerWidth > 1023) {
-      currentProductLink.innerHTML += `<a>
+      currentProductLink.innerHTML += `<a href="${productURL}">
       ${productDetail.name.slice(0, 15) + "..."}
       </a>`;
       productBlog.innerHTML += `<h1>${productDetail.name}</h1>
       <div class="left">
-    <img class="bigimage hoverscale" id="firstimage"  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
+    <img class="bigimage hoverscale" id="firstimage" tabindex=0  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
     ${productDetail.short_description}
     </div>
     <div class="right">
     ${productDetail.description}
     <div class="smallimage">
-    <img id="secondimage" class="hoverscale"  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
-    <img id="thirdimage" class="hoverscale"   src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
+    <img id="secondimage" class="hoverscale" tabindex=0  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
+    <img id="thirdimage" class="hoverscale" tabindex=0  src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
     </div>
     </div>
-   
     `;
     }
     //Modal
@@ -76,8 +76,7 @@ async function getProduct() {
 
     // show first image bigger
     function changeImage() {
-      console.log("hi");
-      modalContainer.innerHTML = `<img src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">`;
+      modalContainer.innerHTML = `<img src="${productDetail.images[0].src}"tabindex=0  alt="${productDetail.images[0].alt}">`;
       modalContainer.style.display = "flex";
     }
 
@@ -85,8 +84,7 @@ async function getProduct() {
 
     // show second image bigger
     function changeSecondImage() {
-      console.log("hi");
-      modalContainer.innerHTML = `<img src="${productDetail.images[1].src}" alt="${productDetail.images[0].alt}">`;
+      modalContainer.innerHTML = `<img src="${productDetail.images[1].src}" tabindex=0  alt="${productDetail.images[0].alt}">`;
       modalContainer.style.display = "flex";
     }
 
@@ -94,8 +92,7 @@ async function getProduct() {
 
     // show third image bigger
     function changeThirdImage() {
-      console.log("hi");
-      modalContainer.innerHTML = `<img src="${productDetail.images[2].src}" alt="${productDetail.images[0].alt}">`;
+      modalContainer.innerHTML = `<img src="${productDetail.images[2].src}" tabindex=0  alt="${productDetail.images[0].alt}">`;
       modalContainer.style.display = "flex";
     }
 
@@ -103,7 +100,6 @@ async function getProduct() {
 
     // remove modal
     function removeModal() {
-      console.log("hi");
       modalContainer.innerHTML = "";
       modalContainer.style.display = "none";
     }

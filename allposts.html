@@ -3,13 +3,14 @@
   <!DOCTYPE html>
   <html>
     <head>
-      <title>the garden</title>
-      <meta name="description" content="The gardens official blog page." />
+      <title>Posts - the garden</title>
+      <meta name="description" content="Check out all of out blog posts at the gardens official blog page." />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="https://use.typekit.net/vyt6ggn.css" />
       <link rel="stylesheet" href="styles/style.css" />
       <link rel="shortcut icon" href="icons/shortcut.svg" />
-      <link rel="stylesheet" href="script/safari.js" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="script/safari.js"></script>
       <!-- Hotjar Tracking Code for https://thegarden.netlify.app -->
       <script>
         (function (h, o, t, j, a, r) {
@@ -34,7 +35,7 @@
         </a>
         <div class="navigation">
           <input type="checkbox" id="hamburgermenu" />
-          <label for="hamburgermenu" id="hamburgerlabel">
+          <label for="hamburgermenu" id="hamburgerlabel"  tabindex=0 role="menu">
             <div class="spancontainer" alt="hamburger menu button">
               <span class="span1"></span>
               <span class="span2"></span>
@@ -52,6 +53,7 @@
         </div>
       </header>
       <main class="greengradient">
+        
         <div class="breadcumbs" id="arrowlink">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -71,11 +73,11 @@
         <div id="all" class="postconatiner smoothetransition"></div>
         <div id="popular" class="postconatiner smoothetransition"></div>
         <div id="featured" class="postconatiner smoothetransition"></div>
-        <div class="blackbutton center">
-          <p>Load more posts</p>
-        </div>
-        <a href="#arrowlink" class="arrowup">
-          
+        <button class="blackbutton center" tabindex=0 role="scrollbar" >
+         Load more posts
+        </button>
+        <a href="#arrowlink">
+          <div class="arrowup" aria-label="SCroll to top" ></div>
         </a>
       </main>
       <footer>
