@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>the garden</title>
     <meta name="description" content="The gardens official blog page." />
@@ -33,7 +33,7 @@
       </a>
       <div class="navigation">
         <input type="checkbox" id="hamburgermenu" />
-        <label for="hamburgermenu" id="hamburgerlabel" tabindex=0 role="menu">
+        <label for="hamburgermenu" id="hamburgerlabel" tabindex="0" role="menu">
           <div class="spancontainer" alt="hamburger menu button">
             <span class="span1 smoothetransition"></span>
             <span class="span2 smoothetransition"></span>
@@ -42,24 +42,28 @@
         </label>
         <nav class="smoothetransition">
           <ul>
-            <li ><a href="index.html" class="smoothetransition underline">Home</a></li>
+            <li>
+              <a href="index.html" class="smoothetransition underline">Home</a>
+            </li>
             <li><a href="allposts.html" class="smoothetransition">Posts</a></li>
-            <li><a href="contactus.html" class="smoothetransition">Contact us</a></li>
-            <li><a href="aboutus.html" class="smoothetransition">About us</a></li>
+            <li>
+              <a href="contactus.html" class="smoothetransition">Contact us</a>
+            </li>
+            <li>
+              <a href="aboutus.html" class="smoothetransition">About us</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <div class="loading">
+        <img src="icons/loader.svg" alt="Loader icon" />
+      </div>
       <div class="landingpage">
-        <h1>
-          Green knowledge at <br />
-          your fingertips.
-        </h1>
+        <h1>Green knowledge at your fingertips.</h1>
         <button class="blackbutton smoothetransition">
-          <a href="allposts.html">
-            Start growing
-          </a>
+          <a href="allposts.html"> Start growing </a>
         </button>
         <a href="#arrowlink">
           <div class="arrowdown" aria-label="scroll down"></div>
@@ -67,10 +71,10 @@
       </div>
       <div class="belowfold">
         <h2>Latest posts</h2>
+
         <div class="carouselcontainer">
           <button class="buttonleft" aria-label="scroll left"></button>
-          <div class="carousel " id="arrowlink">
-
+          <div class="carousel" id="arrowlink">
             <div class="postconatiner smoothetransition"></div>
           </div>
           <button class="buttonright" aria-label="scroll right"></button>
@@ -89,13 +93,13 @@
         <li><a href="">Our shop</a></li>
       </ul>
       <div class="mediaicons">
-          <img src="icons/ig_logo.svg" alt="Instagrams logo" /> 
-          <img src="icons/facebook_logo.svg" alt="Facebooks logo" />
-          <img src="icons/twitter_logo.svg" alt="Twitters logo" />
+        <img src="icons/ig_logo.svg" alt="Instagrams logo" />
+        <img src="icons/facebook_logo.svg" alt="Facebooks logo" />
+        <img src="icons/twitter_logo.svg" alt="Twitters logo" />
       </div>
       <div class="footeremail">
-        <label
-          >Subscribe to our newsletter:
+        <label>
+          Subscribe to our newsletter:
           <div>
             <input
               type="email"
@@ -106,19 +110,16 @@
             <button class="footerbutton">Submit</button>
           </div>
         </label>
-        <div class="hide" id="emailfootererror">
-          Please enter your email.
-        </div>
+        <div class="hide" id="emailfootererror">Please enter your email.</div>
       </div>
       <div class="thermsservice">
-      <p>the garden 2021 ©</p>
-      <div class="horizontal">
-        <p>Privacy policy</p>
-        <p>Support</p>
-        <p>Therms of use</p>
+        <p>the garden 2021 ©</p>
+        <div class="horizontal">
+          <p>Privacy policy</p>
+          <p>Support</p>
+          <p>Therms of use</p>
+        </div>
       </div>
-    </div>
-    </div>
     </footer>
     <script src="script/emailsub.js"></script>
     <script src="script/fetchapi.js"></script>

@@ -5,6 +5,7 @@ const url =
 
 const carousel = document.querySelector(".carousel > div");
 const figure = document.querySelector(".postconatiner");
+const loading = document.querySelector(".loading");
 
 async function getAllPosts() {
   try {
@@ -12,13 +13,16 @@ async function getAllPosts() {
 
     const content = await response.json();
 
-    console.log(content);
+    loading.style.display = "none";
+
     content.length = 9;
     for (let i = 0; i < content.length; i++) {
       carousel.innerHTML += `
       <a href="individualpost.html?id=${content[i].id}">
         <div id="${"post" + content[i].id}" class="hoverscale">
-        <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+        <img src="${content[i].images[0].src}" alt="${
+        content[i].images[0].alt
+      }">
       <h3>${content[i].name}</h3>  
       <p>${content[i].short_description.slice(3, 40)} ... 
       <p class="greentext">Continue reading
@@ -118,6 +122,7 @@ async function getAllPosts() {
     var style = window.getComputedStyle(carousel);
   } catch (error) {
     console.log(error);
+    loading.innerHTML = "Error loading page!";
   }
 }
 getAllPosts();

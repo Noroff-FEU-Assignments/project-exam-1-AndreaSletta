@@ -1,5 +1,7 @@
 // validation contact form
 
+const formContainerHeading = document.querySelector(".formcontainer > h1");
+
 const contactform = document.querySelector(".contactform");
 
 const fullName = document.querySelector("#name");
@@ -48,10 +50,13 @@ function validateForm() {
     checkLength(subject.value, 15) &&
     checkLength(textarea.value, 25)
   ) {
-    contactform.innerHTML +=
-      "<p>" +
+    formContainerHeading.style.display = "none";
+    contactform.style.display = "block";
+    contactform.style.margin = "auto";
+    contactform.innerHTML =
+      "<h2>" +
       "We have recieved your message and will respond to you soon!" +
-      "</p>";
+      "</h2>";
   }
 }
 

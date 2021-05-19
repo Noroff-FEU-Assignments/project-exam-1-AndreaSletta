@@ -1,17 +1,6 @@
 const url =
   "https://andreaslettaexam.eu/wp-json/wc/store/products?_embed&per_page=20";
 
-async function getAllPosts() {
-  try {
-    const response = await fetch(url);
-    const content = await response.json();
-    console.log(content);
-  } catch (error) {
-    console.log(error);
-  }
-}
-getAllPosts();
-
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -24,6 +13,8 @@ const productURL =
 const productBlog = document.querySelector(".productblog");
 const currentProductLink = document.querySelector(".productLink");
 
+const loading = document.querySelector(".loading");
+
 // get singel product
 
 async function getProduct() {
@@ -31,7 +22,7 @@ async function getProduct() {
     const respons = await fetch(productURL);
     const productDetail = await respons.json();
 
-    console.log(productDetail);
+    loading.style.display = "none";
 
     document.title = `${productDetail.name.slice(0, 15) + "... - the garden"}`;
 
@@ -43,8 +34,8 @@ async function getProduct() {
     <img class="bigimage hoverscale" id="firstimage" tabindex=0 src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
     ${productDetail.short_description}
     <div class="smallimage">
-    <img id="secondimage" class="hoverscale" tabindex=0 src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
-    <img id="thirdimage" class="hoverscale" tabindex=0  src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
+    <img id="secondimage" class="hoverscale" tabindex=0   src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
+    <img id="thirdimage" class="hoverscale" tabindex=0   src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
     </div>
     ${productDetail.description}
     `;
@@ -54,14 +45,14 @@ async function getProduct() {
       </a>`;
       productBlog.innerHTML += `<h1>${productDetail.name}</h1>
       <div class="left">
-    <img class="bigimage hoverscale" id="firstimage" tabindex=0  src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
+    <img class="bigimage hoverscale" id="firstimage" tabindex=0   src="${productDetail.images[0].src}" alt="${productDetail.images[0].alt}">
     ${productDetail.short_description}
     </div>
     <div class="right">
     ${productDetail.description}
     <div class="smallimage">
-    <img id="secondimage" class="hoverscale" tabindex=0  src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
-    <img id="thirdimage" class="hoverscale" tabindex=0  src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
+    <img id="secondimage" class="hoverscale" tabindex=0   src="${productDetail.images[1].src}" alt="${productDetail.images[1].alt}">
+    <img id="thirdimage" class="hoverscale" tabindex=0    src="${productDetail.images[2].src}" alt="${productDetail.images[2].alt}">
     </div>
     </div>
     `;
@@ -76,7 +67,7 @@ async function getProduct() {
 
     // show first image bigger
     function changeImage() {
-      modalContainer.innerHTML = `<img src="${productDetail.images[0].src}"tabindex=0  alt="${productDetail.images[0].alt}">`;
+      modalContainer.innerHTML = `<img src="${productDetail.images[0].src}" tabindex=0   alt="${productDetail.images[0].alt}">`;
       modalContainer.style.display = "flex";
     }
 
@@ -92,7 +83,7 @@ async function getProduct() {
 
     // show third image bigger
     function changeThirdImage() {
-      modalContainer.innerHTML = `<img src="${productDetail.images[2].src}" tabindex=0  alt="${productDetail.images[0].alt}">`;
+      modalContainer.innerHTML = `<img src="${productDetail.images[2].src}" tabindex=0 alt="${productDetail.images[0].alt}">`;
       modalContainer.style.display = "flex";
     }
 

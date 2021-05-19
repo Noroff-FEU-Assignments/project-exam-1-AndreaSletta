@@ -56,6 +56,26 @@ li a:hover {
   text-decoration: underline;
 }
 
+.loading {
+  margin-top: 80px;
+  position: absolute;
+  width: 100vw;
+  height: 40px;
+  display: grid;
+  justify-content: center;
+}
+
+.loading img {
+  animation: rotate 3s ease infinite;
+  height: 100%;
+  width: 40px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Mobile */
 
 /* Navigation */
@@ -287,6 +307,9 @@ input::-webkit-input-placeholder {
   background-size: cover;
   padding: 80px 40px 0px 40px;
 }
+.landingpage h1 {
+  max-width: 300px;
+}
 
 .blackbutton {
   margin: 10px 0px;
@@ -396,6 +419,7 @@ input::-webkit-input-placeholder {
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .postconatiner a {
@@ -560,9 +584,9 @@ input::-webkit-input-placeholder {
   display: flex;
 }
 .modal img {
-  width: 90vw;
+  max-width: 90%;
   margin: auto;
-  height: 50%;
+  max-height: 70%;
   object-fit: cover;
   box-shadow: 0px 3px 6px rgb(184, 184, 184);
 }
@@ -574,7 +598,7 @@ input::-webkit-input-placeholder {
   background-color: #ebedea;
 }
 .formcontainer {
-  min-height: 90vh;
+  min-height: 80vh;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -616,6 +640,9 @@ input::-webkit-input-placeholder {
 }
 
 .contactform textarea {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
   height: 100px;
 }
 .contactform input,
@@ -1025,13 +1052,6 @@ input::-webkit-input-placeholder {
     position: fixed;
     top: 0;
     display: flex;
-  }
-  .modal img {
-    width: auto;
-    margin: auto;
-    height: 70%;
-    object-fit: cover;
-    box-shadow: 0px 3px 6px rgb(184, 184, 184);
   }
 
   .aboutus {

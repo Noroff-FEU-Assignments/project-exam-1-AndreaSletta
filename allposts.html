@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <!DOCTYPE html>
   <html>
     <head>
       <title>Posts - the garden</title>
-      <meta name="description" content="Check out all of out blog posts at the gardens official blog page." />
+      <meta
+        name="description"
+        content="Check out all of out blog posts at the gardens official blog page."
+      />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="https://use.typekit.net/vyt6ggn.css" />
       <link rel="stylesheet" href="styles/style.css" />
@@ -35,7 +38,12 @@
         </a>
         <div class="navigation">
           <input type="checkbox" id="hamburgermenu" />
-          <label for="hamburgermenu" id="hamburgerlabel"  tabindex=0 role="menu">
+          <label
+            for="hamburgermenu"
+            id="hamburgerlabel"
+            tabindex="0"
+            role="menu"
+          >
             <div class="spancontainer" alt="hamburger menu button">
               <span class="span1"></span>
               <span class="span2"></span>
@@ -45,20 +53,32 @@
           <nav class="smoothetransition">
             <ul>
               <li><a href="index.html" class="smoothetransition">Home</a></li>
-              <li><a href="allposts.html" class="smoothetransition underline">Posts</a></li>
-              <li><a href="contactus.html" class="smoothetransition">Contact us</a></li>
-              <li><a href="aboutus.html" class="smoothetransition">About us</a></li>
+              <li>
+                <a href="allposts.html" class="smoothetransition underline"
+                  >Posts</a
+                >
+              </li>
+              <li>
+                <a href="contactus.html" class="smoothetransition"
+                  >Contact us</a
+                >
+              </li>
+              <li>
+                <a href="aboutus.html" class="smoothetransition">About us</a>
+              </li>
             </ul>
           </nav>
         </div>
       </header>
       <main class="greengradient">
-        
         <div class="breadcumbs" id="arrowlink">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="allposts.html">Posts</a></li>
           </ul>
+        </div>
+        <div class="loading">
+          <img src="icons/loader.svg" alt="Loader icon" />
         </div>
         <div class="sortingbar">
           <div>
@@ -73,11 +93,11 @@
         <div id="all" class="postconatiner smoothetransition"></div>
         <div id="popular" class="postconatiner smoothetransition"></div>
         <div id="featured" class="postconatiner smoothetransition"></div>
-        <button class="blackbutton center" tabindex=0 role="scrollbar" >
-         Load more posts
+        <button class="blackbutton center" tabindex="0" role="scrollbar">
+          Load more posts
         </button>
         <a href="#arrowlink">
-          <div class="arrowup" aria-label="SCroll to top" ></div>
+          <div class="arrowup" aria-label="SCroll to top"></div>
         </a>
       </main>
       <footer>
@@ -92,9 +112,9 @@
           <li><a href="">Our shop</a></li>
         </ul>
         <div class="mediaicons">
-            <img src="icons/ig_logo.svg" alt="Instagrams logo" /> 
-            <img src="icons/facebook_logo.svg" alt="Facebooks logo" />
-            <img src="icons/twitter_logo.svg" alt="Twitters logo" />
+          <img src="icons/ig_logo.svg" alt="Instagrams logo" />
+          <img src="icons/facebook_logo.svg" alt="Facebooks logo" />
+          <img src="icons/twitter_logo.svg" alt="Twitters logo" />
         </div>
         <div class="footeremail">
           <label
@@ -109,19 +129,16 @@
               <button class="footerbutton">Submit</button>
             </div>
           </label>
-          <div class="hide" id="emailfootererror">
-            Please enter your email.
-          </div>
+          <div class="hide" id="emailfootererror">Please enter your email.</div>
         </div>
         <div class="thermsservice">
-        <p>the garden 2021 ©</p>
-        <div class="horizontal">
-          <p>Privacy policy</p>
-          <p>Support</p>
-          <p>Therms of use</p>
+          <p>the garden 2021 ©</p>
+          <div class="horizontal">
+            <p>Privacy policy</p>
+            <p>Support</p>
+            <p>Therms of use</p>
+          </div>
         </div>
-      </div>
-      </div>
       </footer>
       <script src="script/emailsub.js"></script>
       <script src="script/apiallposts.js"></script>

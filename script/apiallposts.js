@@ -12,6 +12,8 @@ const sortPopular = document.querySelector(".sortpopular");
 const sortFeatured = document.querySelector(".sortfeatured");
 const sortStandard = document.querySelector(".sortstandard");
 
+const loading = document.querySelector(".loading");
+
 async function getAllPosts() {
   try {
     const response = await fetch(url);
@@ -21,13 +23,17 @@ async function getAllPosts() {
     containerFeatured.style.display = "none";
     sortStandard.style.backgroundColor = "white";
 
+    loading.style.display = "none";
+
     //Default
     if (window.innerWidth < 1024) {
       for (var i = 0; i < 6; i++) {
         postConatiner.innerHTML += `
       <a href="individualpost.html?id=${content[i].id}">
         <div id="${"post" + content[i].id}" class="hoverscale">
-        <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+        <img src="${content[i].images[0].src}" alt="${
+          content[i].images[0].alt
+        }">
       <h3>${content[i].name}</h3>  
       <p>${content[i].short_description.slice(3, 40)} ... 
       <p class="greentext">Continue reading
@@ -38,7 +44,9 @@ async function getAllPosts() {
         postConatiner.innerHTML += `
       <a href="individualpost.html?id=${content[i].id}">
         <div id="${"post" + content[i].id}" class="hoverscale">
-        <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+        <img src="${content[i].images[0].src}" alt="${
+          content[i].images[0].alt
+        }">
       <h3>${content[i].name}</h3>  
       <p>${content[i].short_description.slice(3, 40)} ... 
       <p class="greentext">Continue reading
@@ -56,7 +64,9 @@ async function getAllPosts() {
             containerPopular.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
           <div id="${"post" + content[i].id}" class="hoverscale">
-          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+          <img src="${content[i].images[0].src}" alt="${
+              content[i].images[0].alt
+            }">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading
@@ -86,7 +96,9 @@ async function getAllPosts() {
             containerFeatured.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
           <div id="${"post" + content[i].id}" class="hoverscale">
-          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+          <img src="${content[i].images[0].src}" alt="${
+              content[i].images[0].alt
+            }">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading
@@ -113,7 +125,9 @@ async function getAllPosts() {
           postConatiner.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
           <div id="${"post" + content[i].id}" class="hoverscale">
-          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+          <img src="${content[i].images[0].src}" alt="${
+            content[i].images[0].alt
+          }">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading
@@ -124,7 +138,9 @@ async function getAllPosts() {
           postConatiner.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
           <div id="${"post" + content[i].id}" class="hoverscale">
-          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+          <img src="${content[i].images[0].src}" alt="${
+            content[i].images[0].alt
+          }">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading
@@ -153,12 +169,14 @@ async function getAllPosts() {
           postConatiner.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
           <div id="${"post" + content[i].id}" class="hoverscale">
-          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+          <img src="${content[i].images[0].src}" alt="${
+            content[i].images[0].alt
+          }">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading
       `;
-          console.log(childCount);
+
           if (childCount > 11) {
             showMoreButton.style.display = "none";
           }
@@ -172,7 +190,9 @@ async function getAllPosts() {
           postConatiner.innerHTML += `
         <a href="individualpost.html?id=${content[i].id}">
           <div id="${"post" + content[i].id}" class="hoverscale">
-          <img src="${content[i].images[0].src}" alt="${content[i].images.alt}">
+          <img src="${content[i].images[0].src}" alt="${
+            content[i].images[0].alt
+          }">
         <h3>${content[i].name}</h3>  
         <p>${content[i].short_description.slice(3, 40)} ... 
         <p class="greentext">Continue reading

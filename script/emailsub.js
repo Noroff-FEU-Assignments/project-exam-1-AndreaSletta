@@ -40,3 +40,5 @@ function validateEmailFooter(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+
+//loading
