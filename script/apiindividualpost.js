@@ -15,6 +15,8 @@ const currentProductLink = document.querySelector(".productLink");
 
 const loading = document.querySelector(".loading");
 
+loading.style.marginTop = "40px";
+
 // get singel product
 
 async function getProduct() {

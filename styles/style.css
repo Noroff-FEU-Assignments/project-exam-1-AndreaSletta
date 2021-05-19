@@ -58,7 +58,6 @@ li a:hover {
 
 .loading {
   margin-top: 80px;
-  position: absolute;
   width: 100vw;
   height: 40px;
   display: grid;

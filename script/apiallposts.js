@@ -14,6 +14,8 @@ const sortStandard = document.querySelector(".sortstandard");
 
 const loading = document.querySelector(".loading");
 
+loading.style.marginTop = "40px";
+
 async function getAllPosts() {
   try {
     const response = await fetch(url);
