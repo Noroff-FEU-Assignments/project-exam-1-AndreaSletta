@@ -366,14 +366,14 @@ input::-webkit-input-placeholder {
 }
 .belowfold h2 {
   margin: 0;
-  padding: 20px;
+  padding: 30px;
 }
 
 .carouselcontainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .buttonright,
@@ -381,7 +381,7 @@ input::-webkit-input-placeholder {
   background-repeat: no-repeat;
   background-position: center;
   width: 10%;
-  height: 20px;
+  height: 30px;
   border: none;
   background-color: transparent;
 }
@@ -451,8 +451,8 @@ input::-webkit-input-placeholder {
   background: linear-gradient(
     to bottom,
     #ebedea,
-    #ebedea 22vh,
-    transparent 22vh,
+    #ebedea 28vh,
+    transparent 28vh,
     transparent 100%
   );
   margin-top: 70px;
