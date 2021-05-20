@@ -20,8 +20,7 @@ function validateFormFooter() {
     checkLengthFooter(emailFooter.value, 3) &&
     validateEmailFooter(emailFooter.value)
   ) {
-    footerEmail.innerHTML +=
-      "<p>" + "We have recieved your message and will respond to you soon!";
+    footerEmail.innerHTML += "<p>" + "Thank you for subscribing!";
   }
 }
 
