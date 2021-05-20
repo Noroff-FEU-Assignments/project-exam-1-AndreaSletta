@@ -41,14 +41,12 @@ li a:hover {
 
 .hoverscale,
 .smoothetransition {
-  transition: all;
-  transition: 0.5s;
+  transition: all, 0.5s;
 }
 
 .hoverscale:hover {
   transform: scale(1.05);
-  transition: all;
-  transition: 0.5s;
+  transition: all, 0.5s;
   cursor: pointer;
 }
 
@@ -240,9 +238,11 @@ footer ul li a {
   color: white;
 }
 
-footer ul li a:hover {
+footer ul li a:hover,
+footer p:hover {
   color: white;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .footeremail label {
@@ -275,6 +275,7 @@ footer ul li a:hover {
   border-style: solid;
   border-color: white;
   border-width: 0 0 0 2pt;
+  cursor: pointer;
 }
 
 .footeremail label div button:hover {
@@ -488,6 +489,7 @@ input::-webkit-input-placeholder {
   text-align: center;
   justify-content: center;
   z-index: 4;
+  cursor: pointer;
 }
 
 .sortingbar div {
@@ -502,8 +504,7 @@ input::-webkit-input-placeholder {
   height: 20px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all, 0.5s;
 }
 
 .sortingbar > *:first-child p {
